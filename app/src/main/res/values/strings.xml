@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FirebaseLibraryApplication</string>
+    <string name="edit_name">Name</string>
+    <string name="edit_email">Email</string>
+</resources>
