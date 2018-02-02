@@ -72,7 +72,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addUserChangeListener() {
-        // User data change listener
         mFirebaseDatabase.child(userId).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
