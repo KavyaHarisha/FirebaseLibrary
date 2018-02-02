@@ -40,8 +40,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String name = inputName.getText().toString();
                 String email = inputEmail.getText().toString();
-
-                // Check for already existed userId
                 if (TextUtils.isEmpty(userId)) {
                     createUser(name, email);
                 } else {
@@ -53,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
         toggleButton();
     }
 
-    // Changing button text
     private void toggleButton() {
         if (TextUtils.isEmpty(userId)) {
             btnSave.setText("Save");
@@ -62,13 +59,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     * Creating new user node under 'users'
-     */
     private void createUser(String name, String email) {
-        // TODO
-        // In real apps this userId should be fetched
-        // by implementing firebase auth
         if (TextUtils.isEmpty(userId)) {
             userId = mFirebaseDatabase.push().getKey();
         }
@@ -80,9 +71,6 @@ public class MainActivity extends AppCompatActivity {
         addUserChangeListener();
     }
 
-    /**
-     * User data change listener
-     */
     private void addUserChangeListener() {
         // User data change listener
         mFirebaseDatabase.child(userId).addValueEventListener(new ValueEventListener() {
@@ -90,8 +78,6 @@ public class MainActivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 User user = dataSnapshot.getValue(User.class);
                 txtDetails.setText(user.name + ", " + user.email);
-
-                // clear edit text
                 inputEmail.setText("");
                 inputName.setText("");
 
@@ -106,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateUser(String name, String email) {
-        // updating the user via child nodes
         if (!TextUtils.isEmpty(name))
             mFirebaseDatabase.child(userId).child("name").setValue(name);
 
