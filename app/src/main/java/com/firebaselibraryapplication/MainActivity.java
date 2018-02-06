@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.e("no user", "User data is null!");
                     return;
                 }
-                txtDetails.setText(user.name + ", " + user.email);
+                txtDetails.setText(user.mName + ", " + user.mEmail);
                 inputEmail.setText("");
                 inputName.setText("");
 

@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/InterviewProjects.iml" filepath="$PROJECT_DIR$/.idea/InterviewProjects.iml" />
-      <module fileurl="file://F:\kavya\word docs\InterviewProjects\InterviewProjects.iml" filepath="F:\kavya\word docs\InterviewProjects\InterviewProjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FirebaseLibrary.iml" filepath="$PROJECT_DIR$/FirebaseLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/appLib/appLib.iml" filepath="$PROJECT_DIR$/appLib/appLib.iml" />
-      <module fileurl="file://F:\kavya\word docs\InterviewProjects\appLib\appLib.iml" filepath="F:\kavya\word docs\InterviewProjects\appLib\appLib.iml" />
     </modules>
   </component>
 </project>

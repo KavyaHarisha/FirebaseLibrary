@@ -2,14 +2,14 @@ package com.firebaselibraryapplication.model;
 
 public class User {
 
-    public String name;
-    public String email;
+    public String mName;
+    public String mEmail;
 
     public User() {
     }
 
     public User(String name, String email) {
-        this.name = name;
-        this.email = email;
+        this.mName = name;
+        this.mEmail = email;
     }
 }
